@@ -4,7 +4,7 @@ Fisierul index.html si logo-iulia-ciuciur.jpeg trebuie tinute impreuna.
 
 PUBLICARE GRATUITA PE GITHUB PAGES:
 1. Creeaza un repository PUBLIC pe GitHub, de exemplu: iulia-ciuciur-card
-2. Upload: index.html, logo-iulia-ciuciur.jpeg si Iulia-Ciuciur.vcf
+2. Upload: index.html, logo-iulia-ciuciur.png si Iulia-Ciuciur.vcf
 3. Settings -> Pages
 4. Source: Deploy from a branch
 5. Branch: main / root
