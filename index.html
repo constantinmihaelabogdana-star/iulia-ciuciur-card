@@ -2,149 +2,172 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iulia Ciuciur</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f4eadf">
+<title>Iulia Ciuciur — Brand & Business Visuals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-* {
-    box-sizing: border-box;
+:root{
+  --bg:#f3e8dc;
+  --text:#252321;
+  --accent:#c9683f;
+  --line:#cda38d;
 }
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg)}
+body{font-family:"DM Sans",Arial,sans-serif;color:var(--text);overflow-x:hidden}
+.page{min-height:100vh;max-width:620px;margin:auto;padding:24px 22px 38px;position:relative;overflow:hidden}
+.content{position:relative;z-index:2}
+.decor{position:absolute;pointer-events:none}
+.decor.a{width:290px;height:290px;border-radius:50%;right:-190px;top:230px;background:rgba(255,255,255,.20)}
+.decor.b{width:360px;height:360px;border-radius:50%;left:-275px;bottom:70px;background:rgba(213,190,168,.20)}
+.decor.c{width:290px;height:1px;background:var(--line);transform:rotate(28deg);left:-190px;bottom:155px}
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: #f4f4f4;
-    color: #222;
+.logo-wrap{text-align:center;height:275px;position:relative;margin-bottom:2px}
+.logo{
+  width:min(100%,580px);
+  height:275px;
+  object-fit:contain;
+  mix-blend-mode:multiply;
+  display:block;
+  margin:auto;
 }
+.mini-line{width:108px;height:1px;background:var(--line);margin:2px auto 13px}
 
-.card {
-    width: 100%;
-    max-width: 430px;
-    min-height: 100vh;
-    margin: 0 auto;
-    background: white;
-    padding: 45px 25px 35px;
-    text-align: center;
+.hero-box{
+  border:1px solid var(--line);
+  border-radius:27px;
+  padding:25px 14px 22px;
+  text-align:center;
+  position:relative;
 }
-
-.profile {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 18px;
-    border: 3px solid #222;
+.hero-box:before,.hero-box:after{
+  content:"";position:absolute;top:-1px;width:74px;height:1px;background:var(--line)
 }
-
-h1 {
-    margin: 5px 0 8px;
-    font-size: 28px;
-    font-weight: 700;
+.hero-box:before{left:27px}.hero-box:after{right:27px}
+.hero-title{
+  font-family:"Cormorant Garamond",serif;
+  font-size:49px;line-height:1;font-weight:500;margin:0 0 13px
 }
+.hero-sub{font-size:11px;letter-spacing:4px;font-weight:500}
 
-.subtitle {
-    margin: 0 0 30px;
-    color: #666;
-    font-size: 15px;
+.statement{
+  font-family:"Cormorant Garamond",serif;
+  font-size:25px;line-height:1.08;text-align:center;
+  margin:31px auto 26px;max-width:420px
 }
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
+.button{
+  min-height:72px;border:1px solid var(--line);border-radius:38px;
+  display:flex;align-items:center;gap:15px;padding:12px 20px;
+  margin:14px 0;text-decoration:none;color:var(--text);
+  background:rgba(255,255,255,.06)
 }
+.button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.icon{width:32px;height:32px;display:grid;place-items:center;flex:none}
+.button-text{flex:1;text-align:left}
+.button-title{display:block;font-size:15px;letter-spacing:1.25px;font-weight:500}
+.button-sub{display:block;font-size:11px;margin-top:3px;opacity:.92}
+.arrow{font-size:28px;font-weight:300;line-height:1}
 
-.button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 54px;
-    padding: 12px 18px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #222;
-    background: #f1f1f1;
-    font-size: 16px;
-    font-weight: 600;
-    border: 1px solid #ddd;
-    transition: transform 0.15s ease;
+.socials{
+  margin-top:29px;padding-top:25px;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:9px;text-align:center
 }
-
-.button:active {
-    transform: scale(0.98);
+.social{color:var(--text);text-decoration:none;font-size:11px}
+.social-icon{
+  width:58px;height:58px;border:1px solid var(--line);border-radius:50%;
+  display:grid;place-items:center;margin:0 auto 9px;font-size:22px;font-weight:600
 }
+.social-label{font-size:11px}
 
-.icon {
-    margin-right: 10px;
-    font-size: 20px;
-}
-
-.footer {
-    margin-top: 35px;
-    font-size: 12px;
-    color: #999;
+@media(max-width:420px){
+ .page{padding-left:17px;padding-right:17px}
+ .logo-wrap{height:245px}
+ .logo{height:245px}
+ .hero-title{font-size:42px}
+ .statement{font-size:23px}
+ .hero-sub{font-size:10px;letter-spacing:3.2px}
 }
 </style>
 </head>
-
 <body>
+<div class="page">
+  <div class="decor a"></div><div class="decor b"></div><div class="decor c"></div>
+  <main class="content">
 
-<div class="card">
+    <section class="logo-wrap">
+      <img class="logo" src="logo-iulia-ciuciur.jpeg" alt="Iulia Ciuciur — Brand & Business Visuals">
+    </section>
 
-    <div class="profile-placeholder">
-        <div style="
-            width:120px;
-            height:120px;
-            border-radius:50%;
-            margin:0 auto 18px;
-            background:#222;
-            color:white;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-size:42px;
-            font-weight:700;
-        ">IC</div>
-    </div>
+    <div class="mini-line"></div>
 
-    <h1>Iulia Ciuciur</h1>
+    <section class="hero-box">
+      <h1 class="hero-title">Reveal Your Brand</h1>
+      <div class="hero-sub">CONCEPT&nbsp;&nbsp;•&nbsp;&nbsp;STRATEGIE&nbsp;&nbsp;•&nbsp;&nbsp;IMAGINE</div>
+    </section>
 
-    <p class="subtitle">Business & Professional Profile</p>
+    <p class="statement">Investește într-o experiență<br>care merită să fie văzută.</p>
 
-    <div class="buttons">
+    <a class="button primary" href="https://www.instagram.com/iuliaciuciur_business/" target="_blank" rel="noopener">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="29" height="29" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.7" r="1"></circle>
+        </svg>
+      </span>
+      <span class="button-text">
+        <span class="button-title">VEZI PORTOFOLIUL FOTO</span>
+        <span class="button-sub">Instagram @iuliaciuciur_business</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
 
-        <a class="button" href="mailto:office.2sys@gmail.com">
-            <span class="icon">✉️</span>
-            Email
-        </a>
+    <a class="button" href="https://wa.me/40726759988" target="_blank" rel="noopener">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7">
+          <path d="M20.2 11.2a8.2 8.2 0 0 1-12.1 7.1L3.5 19.5l1.2-4.4A8.2 8.2 0 1 1 20.2 11.2Z"></path>
+          <path d="M8.2 8.2c.3-.6.7-.6 1-.5l1 .9c.3.3.3.6.1.9l-.5.7c.8 1.3 1.8 2.2 3.2 2.8l.7-.6c.3-.2.6-.2.9 0l1 .8c.3.2.3.6.1.9-.4.8-1.1 1.1-1.8 1-2.1-.3-5.1-2.9-5.9-5.1-.2-.6-.2-1.2.2-1.8Z"></path>
+        </svg>
+      </span>
+      <span class="button-text"><span class="button-title">HAI SĂ NE CUNOAȘTEM</span></span>
+      <span class="arrow">→</span>
+    </a>
 
-        <a class="button" href="https://www.facebook.com/iuliaciuciur.sialinastan" target="_blank">
-            <span class="icon">f</span>
-            Facebook
-        </a>
+    <a class="button" href="Iulia-Ciuciur.vcf" download>
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7">
+          <circle cx="12" cy="8" r="3.3"></circle><path d="M5.2 20c.7-3.5 3-5.4 6.8-5.4s6.1 1.9 6.8 5.4"></path>
+        </svg>
+      </span>
+      <span class="button-text"><span class="button-title">SALVEAZĂ CONTACTUL</span></span>
+      <span class="arrow">→</span>
+    </a>
 
-        <a class="button" href="https://www.instagram.com/iuliaciuciur_business/" target="_blank">
-            <span class="icon">◎</span>
-            Instagram
-        </a>
+    <nav class="socials" aria-label="Social media">
+      <a class="social" href="https://www.instagram.com/iuliaciuciur_business/" target="_blank" rel="noopener">
+        <span class="social-icon">
+          <svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.7" r="1"></circle>
+          </svg>
+        </span><span class="social-label">Instagram</span>
+      </a>
+      <a class="social" href="https://www.linkedin.com/in/iulia-ciuciur-10544187/" target="_blank" rel="noopener">
+        <span class="social-icon" style="font-family:Arial">in</span><span class="social-label">LinkedIn</span>
+      </a>
+      <a class="social" href="https://www.facebook.com/iuliaciuciur.sialinastan" target="_blank" rel="noopener">
+        <span class="social-icon" style="font-family:Arial">f</span><span class="social-label">Facebook</span>
+      </a>
+      <a class="social" href="mailto:office.2sys@gmail.com">
+        <span class="social-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="5" width="18" height="14" rx="1.8"></rect><path d="m4 7 8 6 8-6"></path>
+          </svg>
+        </span><span class="social-label">Email</span>
+      </a>
+    </nav>
 
-        <a class="button" href="https://www.linkedin.com/in/iulia-ciuciur-10544187/" target="_blank">
-            <span class="icon">in</span>
-            LinkedIn
-        </a>
-
-        <a class="button" href="https://wa.me/40726759988" target="_blank">
-            <span class="icon">☏</span>
-            WhatsApp
-        </a>
-
-    </div>
-
-    <div class="footer">
-        Digital Business Card
-    </div>
-
+  </main>
 </div>
-
 </body>
 </html>
