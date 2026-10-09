@@ -17,4 +17,4 @@ Instagram: https://www.instagram.com/iuliaciuciur_business/
 Facebook: https://www.facebook.com/iuliaciuciur.sialinastan
 LinkedIn: https://www.linkedin.com/in/iulia-ciuciur-10544187/
 WhatsApp: +40726759988
-Email: office.2sys@gmail.com
+Email:iuliaciuciur.visuals@gmail.com
